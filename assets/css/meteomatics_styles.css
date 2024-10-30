@@ -1,0 +1,161 @@
+.meteomatics-widget-settings {
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+	margin-top: 20px;
+	margin-right: 20px;
+	padding: 10px 0 10px 20px;
+	box-sizing: border-box;
+}
+
+.meteomatics-widget-configurator {
+	width: 50%;
+	padding-right: 20px;
+	border-right: 1px solid #ccc;
+}
+
+.meteomatics-widget-configurator-buttons {
+	margin-top: 10px;
+}
+
+.meteomatics-widget-configurator input:not([type=submit]),
+.meteomatics-widget-configurator select {
+	width: 220px;
+	background-color: #f8f8f8;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 3px 10px;
+	outline: none;
+}
+
+.meteomatics-widget-configurator input:not([type=submit]):focus,
+.meteomatics-widget-configurator select:focus {
+	border-color: rgb(0, 54, 82);
+}
+
+.meteomatics-widget-configurator .meteomatics-button {
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: 1px solid;
+	cursor: pointer;
+}
+
+.meteomatics-widget-configurator .meteomatics-button-primary {
+	background-color: rgb(0, 54, 82);
+	border-color: rgb(0, 54, 82);
+	color: #fff;
+}
+
+.meteomatics-widget-configurator .meteomatics-button-primary:hover {
+	background-color: rgb(222, 253, 131);
+	border-color: rgb(222, 253, 131);
+	color: rgb(0, 54, 82);
+}
+
+.meteomatics-widget-configurator .meteomatics-button-secondary {
+	background-color: rgb(222, 253, 131);
+	border-color: rgb(222, 253, 131);
+	color: rgb(0, 54, 82);
+	margin-left: 10px;
+}
+
+.meteomatics-widget-configurator .meteomatics-button-secondary:hover {
+	border-color: rgb(0, 54, 82);
+}
+
+.meteomatics-widget-preview {
+	width: 50%;
+	padding-left: 20px;
+	position: relative;
+}
+
+.meteomatics-widget-preview h4 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+
+
+.meteomatics-widget-logo {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100px;
+}
+
+.meteomatics-widget-shortcode {
+	position: relative;
+	background-color: #f8f8f8;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 15px 65px 15px 15px;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.meteomatics-widget-code {
+	position: relative;
+	max-width: 370px;
+	padding: 10px 65px 10px 20px;
+	background-color: #f8f8f8;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.meteomatics-widget-shortcode:after,
+.meteomatics-widget-code:after {
+	content: "";
+  display: block;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url('../img/copy_icon.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.meteomatics-widget-shortcode.copied:after,
+.meteomatics-widget-code.copied:after {
+	content: 'Copied';
+	width: 48px;
+	height: auto;
+	background: none;
+}
+
+.meteomatics-input-helper {
+	color: #b8b4b4;
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+.meteomatics-preview-errors {
+	display: none;
+	color: #c00;
+	font-size: 12px;
+}
+
+
+@media all and (max-width: 1180px) {
+	.meteomatics-widget-settings {
+		flex-wrap: wrap;
+	}
+	.meteomatics-widget-configurator {
+		width: 100%;
+		border-right: none;
+		padding-right: 0;
+	}
+	.meteomatics-widget-preview {
+		width: 100%;
+		margin-top: 20px;
+		padding-left: 0;
+		padding-bottom: 60px;
+	}
+	
+	.meteomatics-widget-configurator input:not([type=submit]), .meteomatics-widget-configurator select {
+		width: 100%;
+	}
+}
